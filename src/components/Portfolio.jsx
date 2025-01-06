@@ -46,7 +46,6 @@ const projects = [
 ];
 
 function Portfolio() {
-  // Animation for project cards
   const projectCardAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
@@ -65,20 +64,19 @@ function Portfolio() {
           sx={{
             textAlign: "center",
             marginBottom: "40px",
-            color: "black", // Updated color to black
+            color: "black",
           }}
           className="section-title"
         >
           Projects
         </Typography>
 
-        {/* Grid layout for the projects */}
         <div className="projects-grid">
           {projects.map((project, index) => (
             <animated.div
               className="project-card"
               key={index}
-              style={projectCardAnimation} // Apply animation to each project card
+              style={projectCardAnimation}
             >
               <div className="image-container">
                 <img
@@ -93,7 +91,7 @@ function Portfolio() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src={githubLogo} // Replace with the actual GitHub logo path
+                      src={githubLogo}
                       alt="GitHub"
                       className="github-logo"
                     />

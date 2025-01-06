@@ -1,20 +1,19 @@
-import { useSpring, animated } from "react-spring"; // Import react-spring hooks
-import { Box, Typography, Paper } from "@mui/material"; // Import MUI components
-import me from "../assets/developer.jpg"; // Your image
+import { useSpring, animated } from "react-spring";
+import { Box, Typography, Paper } from "@mui/material";
+import me from "../assets/developer.jpg";
 
 function About() {
-  // Animation for image and text
   const imageAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
-    from: { opacity: 0, transform: "translateY(-50px)" }, // Start from opacity 0 and move image up
-    config: { tension: 150, friction: 25 }, // Custom configuration for smooth animation
+    from: { opacity: 0, transform: "translateY(-50px)" },
+    config: { tension: 150, friction: 25 },
   });
 
   const textAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
-    from: { opacity: 0, transform: "translateY(50px)" }, // Start from opacity 0 and move text up
+    from: { opacity: 0, transform: "translateY(50px)" },
     config: { tension: 150, friction: 25 },
   });
 
@@ -35,10 +34,10 @@ function About() {
           className="my-pic"
           src={me}
           alt="Hassan Zafar"
-          style={imageAnimation} // Apply animation to the image
-          width="200" // Image width, adjust as needed
-          height="200" // Image height, adjust as needed
-          sx={{ borderRadius: "50%", marginBottom: 2 }} // Round image
+          style={imageAnimation}
+          width="200"
+          height="200"
+          sx={{ borderRadius: "50%", marginBottom: 2 }}
         />
 
         {/* Header text with animation */}

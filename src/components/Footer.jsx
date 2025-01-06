@@ -1,8 +1,8 @@
-import { Box, Typography, Link, IconButton } from "@mui/material"; // Material UI components
-import { useSpring, animated } from "react-spring"; // react-spring for animations
+import { Box, Typography, Link, IconButton } from "@mui/material";
+import { useSpring, animated } from "react-spring";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { SvgIcon } from "@mui/material"; // Importing SvgIcon for custom StackOverflowIcon
+import { SvgIcon } from "@mui/material";
 
 // Custom StackOverflow Icon
 const StackOverflowIcon = () => (
@@ -12,11 +12,10 @@ const StackOverflowIcon = () => (
 );
 
 function Footer() {
-  // Animation for the footer content
   const footerAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
-    from: { opacity: 0, transform: "translateY(20px)" }, // Start with hidden, slide up
+    from: { opacity: 0, transform: "translateY(20px)" },
     config: { tension: 120, friction: 25 },
   });
 
@@ -55,7 +54,7 @@ function Footer() {
             sx={{
               color: "#fff",
               textDecoration: "none",
-              mx: 1, // Horizontal margin between links
+              mx: 1,
               fontWeight: "bold",
               "&:hover": {
                 textDecoration: "underline",

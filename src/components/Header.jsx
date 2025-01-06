@@ -1,4 +1,4 @@
-import Navigation from "./Navigation"; // Keep Navigation component
+import Navigation from "./Navigation";
 
 function Header() {
   return (

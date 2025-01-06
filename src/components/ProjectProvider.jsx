@@ -1,20 +1,16 @@
 import { createContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-// Create the context
 export const ProjectContext = createContext();
 
-// Create the provider component
 export const ProjectProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
-  const [error, setError] = useState(null); // Add error state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Fetch project data (simulate an API call)
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        // Simulate an API call to get project data
         const data = [
           {
             id: 1,
@@ -62,11 +58,11 @@ export const ProjectProvider = ({ children }) => {
           },
         ];
 
-        setProjects(data); // Set the projects data
-        setLoading(false); // Set loading to false after data is fetched
+        setProjects(data);
+        setLoading(false);
       } catch (error) {
-        setError("Failed to load projects."); // Set error message
-        setLoading(false); // Set loading to false on error
+        setError("Failed to load projects.");
+        setLoading(false);
         console.error("Error fetching projects:", error);
       }
     };

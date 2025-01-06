@@ -1,4 +1,4 @@
-import { useSpring, animated } from "react-spring"; // Import react-spring hooks
+import { useSpring, animated } from "react-spring";
 import {
   Box,
   Typography,
@@ -18,7 +18,6 @@ function Resume() {
     config: { tension: 150, friction: 25 },
   });
 
-  // Animation for technical skills list
   const skillsAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
@@ -29,14 +28,12 @@ function Resume() {
 
   return (
     <Box id="resume" className="resume" sx={{ padding: "40px 0" }}>
-      {/* Apply animation to Resume title */}
       <animated.div style={titleAnimation}>
         <Typography variant="h3" component="h1" align="center" gutterBottom>
           Resume
         </Typography>
       </animated.div>
 
-      {/* Downloadable Resume Link */}
       <Box
         className="download-resume"
         sx={{ textAlign: "center", marginBottom: 3 }}
@@ -55,7 +52,6 @@ function Resume() {
         </Typography>
       </Box>
 
-      {/* Apply animation to the skills list */}
       <animated.div style={skillsAnimation}>
         <Paper elevation={3} sx={{ padding: 3, marginTop: 3 }}>
           <Typography variant="h5" component="h2" gutterBottom>

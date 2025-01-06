@@ -1,13 +1,13 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import { useSpring, animated } from "react-spring"; // Import react-spring hooks
+import { useSpring, animated } from "react-spring";
 import {
   Box,
   Typography,
   TextField,
   Button,
   CircularProgress,
-} from "@mui/material"; // Import Material UI components
+} from "@mui/material";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -20,7 +20,6 @@ function Contact() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errors, setErrors] = useState({});
 
-  // Form field animations
   const formAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
@@ -35,7 +34,6 @@ function Contact() {
     config: { tension: 120, friction: 22 },
   });
 
-  // Handle form input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -47,7 +45,6 @@ function Contact() {
     return emailRegex.test(email);
   };
 
-  // Handle onBlur validation for required fields
   const handleBlur = (e) => {
     const { name, value } = e.target;
     const newErrors = { ...errors };
@@ -57,7 +54,7 @@ function Contact() {
         name.charAt(0).toUpperCase() + name.slice(1)
       } is required`;
     } else {
-      newErrors[name] = ""; // Clear error message when input is not empty
+      newErrors[name] = "";
     }
 
     if (name === "email" && !validateEmail(value)) {
@@ -67,7 +64,6 @@ function Contact() {
     setErrors(newErrors);
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 

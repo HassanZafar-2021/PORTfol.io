@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Box, Typography } from "@mui/material"; // Material UI components
+import { Box } from "@mui/material";
 import { useSpring, animated } from "react-spring"; // react-spring for animations
 
 function Navigation() {
@@ -7,7 +7,7 @@ function Navigation() {
   const linkAnimation = useSpring({
     opacity: 1,
     transform: "translateY(0)",
-    from: { opacity: 0, transform: "translateY(-10px)" }, // Start from top
+    from: { opacity: 0, transform: "translateY(-10px)" },
     config: { tension: 120, friction: 22 },
   });
 
@@ -18,7 +18,7 @@ function Navigation() {
         display: "flex",
         justifyContent: "center",
         padding: "20px",
-        backgroundColor: "#333", // Dark background for navigation
+        backgroundColor: "#333",
       }}
     >
       <ul

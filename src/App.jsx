@@ -10,14 +10,19 @@ function App() {
   return (
     <Router>
       <div className="bucket-app">
+        {/* Header will be displayed on all pages */}
         <Header />
+
+        {/* Main content with routes */}
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<About />} /> {/* Default route */}
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
+
+        {/* Footer will be displayed on all pages */}
         <Footer />
       </div>
     </Router>

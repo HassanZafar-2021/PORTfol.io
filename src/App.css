@@ -1,14 +1,18 @@
+/* Root and body styling */
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
   text-align: center;
+  box-sizing: border-box; /* Consistent width calculation */
+  width: 100%; /* Full width */
 }
+
 body {
-  font-family: Arial, sans-serif; /* Consistent font */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 320px; /* Responsive design */
 }
 
 main {
@@ -21,6 +25,8 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+/* Typography */
 h1,
 h2,
 h3,
@@ -34,28 +40,37 @@ p,
 span {
   font-size: 1rem; /* Define consistent font size for paragraphs */
 }
+
 .about,
 .portfolio,
 .contact,
 .resume {
   padding: 20px;
-  margin: 20px auto;
-  max-width: 1200px;
+  margin: 0 auto; /* Horizontal centering */
+  max-width: 1280px; /* Ensures the sections have the same width as #root */
+  width: calc(
+    100% - 40px
+  ); /* Ensures consistent full-width layout considering padding */
+  box-sizing: border-box; /* Includes padding in width */
 }
 
+/* Logo Styling */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Keyframes for logo animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -71,6 +86,7 @@ span {
   }
 }
 
+/* Card Styling */
 .card {
   padding: 2em;
 }
@@ -79,18 +95,14 @@ span {
   color: #888;
 }
 
-/* Centering the contact form */
+/* Contact Section Styling */
 .contact {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for form labels and inputs */
+/* Form Styling */
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -125,14 +137,14 @@ span {
   border-color: #4caf50;
 }
 
-/* Error messages */
+/* Error Messages */
 .error {
   color: red;
   font-size: 0.875rem;
   margin-top: 5px;
 }
 
-/* Styling for submit button */
+/* Submit Button Styling */
 .submit-btn {
   background-color: #4caf50;
   color: white;
@@ -152,7 +164,7 @@ span {
   background-color: #388e3c;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact {
     padding: 15px;

@@ -76,3 +76,4 @@ dist/
 # Server and deployment files
 *.tgz
 .yarn-integrity
+node_modules

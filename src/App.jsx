@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import "./App.css";
+
 
 function App() {
   return (

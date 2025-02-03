@@ -48,13 +48,16 @@ function About() {
           <Typography
             variant="body1"
             align="center"
-            paragraph
+            component="p"
             sx={{ color: "#1a1a1a" }} // Darker text color (near black)
           >
-            I am a full stack engineer with over 3 years of experience. I am
-            from Commack, NY, and 23 years old. I am looking for any entry-level
-            software engineer/computer programmer job. Feel free to look at my
-            resume and contact!
+            I am a Full Stack Engineer with over three years of experience in
+            building scalable and user-friendly web applications. Based in
+            Commack, NY, I specialize in both front-end and back-end
+            development. I am seeking an entry-level Software Engineer or
+            Computer Programmer role where I can contribute my skills and grow
+            within a dynamic team. Feel free to check out my resume and reach
+            out!
           </Typography>
         </animated.div>
       </Paper>

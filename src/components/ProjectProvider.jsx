@@ -44,17 +44,17 @@ export const ProjectProvider = ({ children }) => {
           },
           {
             id: 5,
-            name: "Auto-Assembler",
-            description: "TypeScript project that assembles a car.",
-            image: "../assets/auto.jpg",
-            link: "https://github.com/HassanZafar-2021/PORTfol.io",
+            name: "TernaryTreeDirectory",
+            description: "File Explorer Command Prompt Simulator.",
+            image: "../assets/ternarytree.png",
+            link: "https://github.com/HassanZafar-2021/TernaryTreeDirectory",
           },
           {
             id: 6,
-            name: "Server-Forecast",
+            name: "SkyScript",
             description: "Weather forecast app using OpenWeatherMap API.",
             image: "/assets/weather.png",
-            link: "https://github.com/HassanZafar-2021/Server-Forecast",
+            link: "https://github.com/HassanZafar-2021/SkyScript",
           },
         ];
 

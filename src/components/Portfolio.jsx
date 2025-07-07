@@ -8,7 +8,7 @@ import vocalVisionImg from "../assets/ai.png";
 import gameSeekImg from "../assets/gameSeek.png";
 import portfolioImg from "../assets/reactLogo.png";
 import githubLogo from "../assets/githubLogo.png";
-import autoImg from "../assets/auto.jpg";
+import ternarytree from "../assets/ternarytree.png";
 import weatherImg from "../assets/weather.png";
 
 // Projects data
@@ -34,14 +34,14 @@ const projects = [
     link: "https://github.com/HassanZafar-2021/PORTfol.io",
   },
   {
-    title: "Auto-Assembler",
-    imgSrc: autoImg,
-    link: "https://github.com/HassanZafar-2021/Auto-Assembler",
+    title: "TernaryTreeDirectory",
+    imgSrc: ternarytree,
+    link: "https://github.com/HassanZafar-2021/TernaryTreeDirectory",
   },
   {
-    title: "Server-Forecast",
+    title: "SkyScript",
     imgSrc: weatherImg,
-    link: "https://github.com/HassanZafar-2021/Server-Forecast",
+    link: "https://github.com/HassanZafar-2021/SkyScript",
   },
 ];
 

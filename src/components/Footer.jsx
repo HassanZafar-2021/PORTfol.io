@@ -1,4 +1,4 @@
-import { Box, Typography, Link, IconButton } from "@mui/material";
+import { Box, Typography, Link } from "@mui/material";
 import { useSpring, animated } from "react-spring";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

@@ -12,8 +12,6 @@ function Header() {
             <a
               className="navbar-item"
               rel="noreferrer"
-              target="_blank"
-              href="https://github.com/HassanZafar-2021"
             >
               <span className="content is-large" style={{ color: "#000000" }}>
                 Raja Hassan Zafar

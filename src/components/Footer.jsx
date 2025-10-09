@@ -33,8 +33,6 @@ function Footer() {
         <Typography variant="body2" sx={{ mb: 2 }}>
           <strong>My Full Stack Development Portfolio</strong> - a React site by{" "}
           <Link
-            href="https://github.com/HassanZafar-2021"
-            target="_blank"
             rel="noreferrer"
             sx={{
               color: "#fff",

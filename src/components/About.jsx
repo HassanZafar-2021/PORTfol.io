@@ -51,13 +51,15 @@ function About() {
             component="p"
             sx={{ color: "#1a1a1a" }} // Darker text color (near black)
           >
-            I am a Full Stack Engineer with over three years of experience in
-            building scalable and user-friendly web applications. Based in
-            Commack, NY, I specialize in both front-end and back-end
-            development. I am seeking an entry-level Software Engineer or
-            Computer Programmer role where I can contribute my skills and grow
-            within a dynamic team. Feel free to check out my resume and reach
-            out!
+          I’m a Post-Baccalaureate Computer Science student at OSU
+          and a graduate of the UCI Full-Stack Coding Bootcamp. 
+          With over two years of experience in customer service
+           and hands-on software engineering projects, 
+           I’ve developed a strong foundation in problem-solving and front-end development. 
+           Based in Commack, NY, I’m passionate about building intuitive, 
+           user-focused applications and continually sharpening my skills through LeetCode and real-world projects. 
+            I’m currently seeking an entry-level Software Engineer role where I can contribute,
+             learn, and grow within a collaborative and innovative team.
           </Typography>
         </animated.div>
       </Paper>

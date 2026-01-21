@@ -39,11 +39,11 @@ function Resume() {
         sx={{ textAlign: "center", marginBottom: 3 }}
       >
         <Typography variant="body1">
-          Download my resume{""}
+          Download my resume{" "}
           <Button
             variant="contained"
             color="primary"
-            href="../../public/Resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

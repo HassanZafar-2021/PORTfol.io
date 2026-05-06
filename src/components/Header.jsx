@@ -2,26 +2,16 @@ import Navigation from "./Navigation";
 
 function Header() {
   return (
-    <div>
-      <nav
-        className="navbar navbar-expand-lg navbar-light"
-        style={{ backgroundColor: "#FFFF00", width: "100%" }}
-      >
-        <div className="container-fluid">
-          <div className="navbar-brand">
-            <a
-              className="navbar-item"
-              rel="noreferrer"
-            >
-              <span className="content is-large" style={{ color: "#000000" }}>
-                Raja Hassan Zafar
-              </span>
-            </a>
-          </div>
-        </div>
-      </nav>
+    <header>
+      <div className="top-brand-bar">
+        <span className="brand-name">
+          Raja <span className="highlight">Hassan</span> Zafar
+        </span>
+        <span className="brand-tagline">Software Engineer · Commack, NY</span>
+      </div>
       <Navigation />
-    </div>
+    </header>
   );
 }
+
 export default Header;

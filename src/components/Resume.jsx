@@ -1,79 +1,77 @@
 import { useSpring, animated } from "react-spring";
-import {
-  Box,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Paper,
-  Button,
-} from "@mui/material"; // Import MUI components
+
+const SKILLS = [
+  {
+    category: "Languages",
+    items: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C"],
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: ["React", "Flask", "LangChain", "Node.js"],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Docker", "Git", "GitLab", "AWS", "GCP", "Jira", "Bash", "Insomnia"],
+  },
+  {
+    category: "Concepts",
+    items: ["RESTful APIs", "Data Structures", "OOP", "Agile / Scrum", "CI/CD"],
+  },
+];
 
 function Resume() {
-  // Animation for the resume section title (fade in with slight upward movement)
-  const titleAnimation = useSpring({
+  const fadeUp = useSpring({
     opacity: 1,
-    transform: "translateY(0)",
-    from: { opacity: 0, transform: "translateY(20px)" },
-    config: { tension: 150, friction: 25 },
+    transform: "translateY(0px)",
+    from: { opacity: 0, transform: "translateY(24px)" },
+    config: { tension: 140, friction: 26 },
   });
 
-  const skillsAnimation = useSpring({
+  const fadeUpDelay = useSpring({
     opacity: 1,
-    transform: "translateY(0)",
-    from: { opacity: 0, transform: "translateY(20px)" },
-    delay: 300, // Delay the skills list animation slightly
-    config: { tension: 150, friction: 25 },
+    transform: "translateY(0px)",
+    from: { opacity: 0, transform: "translateY(24px)" },
+    config: { tension: 140, friction: 26 },
+    delay: 200,
   });
 
   return (
-    <Box id="resume" className="resume" sx={{ padding: "40px 0" }}>
-      <animated.div style={titleAnimation}>
-        <Typography variant="h3" component="h1" align="center" gutterBottom>
-          Resume
-        </Typography>
+    <div className="section-wrapper">
+      <animated.span style={fadeUp} className="section-eyebrow">Qualifications</animated.span>
+      <animated.h2 style={fadeUp} className="section-title">Resume</animated.h2>
+
+      {/* Download box */}
+      <animated.div style={fadeUp} className="resume-download-box">
+        <div>
+          <span className="resume-download-label">Full Résumé</span>
+          <p className="resume-download-text">Raja Hassan Zafar — Software Engineer</p>
+        </div>
+        <a
+          className="download-btn"
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download PDF
+        </a>
       </animated.div>
 
-      <Box
-        className="download-resume"
-        sx={{ textAlign: "center", marginBottom: 3 }}
-      >
-        <Typography variant="body1">
-          Download my resume{" "}
-          <Button
-            variant="contained"
-            color="primary"
-            href="/Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            here
-          </Button>
-        </Typography>
-      </Box>
+      {/* Skills */}
+      <animated.div style={fadeUpDelay} className="skills-card">
+        <p className="skills-card-title">Technical Skills</p>
 
-      <animated.div style={skillsAnimation}>
-        <Paper elevation={3} sx={{ padding: 3, marginTop: 3 }}>
-          <Typography variant="h5" component="h2" gutterBottom>
-            Technical Skills Proficiencies
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText
-                primary={<strong>Languages:</strong>}
-                secondary="Java (Expert), Python (Expert), JavaScript (Proficient), SQL (Proficient), TypeScript, C (Beginner)"
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText
-                primary={<strong>Tools/Software:</strong>}
-                secondary="LangChain, Docker, Git, GitLab, Jira, AWS, GCP, Bash, Insomnia, RESTful APIs, React"
-              />
-            </ListItem>
-          </List>
-        </Paper>
+        {SKILLS.map(({ category, items }) => (
+          <div className="skill-row" key={category}>
+            <p className="skill-category">{category}</p>
+            <div className="skill-pills">
+              {items.map((item) => (
+                <span key={item} className="skill-pill">{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </animated.div>
-    </Box>
+    </div>
   );
 }
 

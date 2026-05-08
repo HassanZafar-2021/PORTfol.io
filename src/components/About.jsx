@@ -1,10 +1,6 @@
 import { useSpring, animated } from "react-spring";
-import me from "../assets/developer.jpg";
+import me from "../assets/me.png";
 
-const TAGS = [
-  "Python", "Java", "JavaScript", "React", "Flask",
-  "MySQL", "Docker", "AWS", "LangChain", "RESTful APIs", "Git",
-];
 
 function About() {
   const fadeUp = useSpring({
@@ -42,20 +38,15 @@ function About() {
           <p className="about-bio">
             I'm a Post-Baccalaureate Computer Science student at Oregon State University
             and a graduate of the UCI Full-Stack Coding Bootcamp. With hands-on software
-            engineering projects and two years of customer service experience, I've built
-            a strong foundation in problem-solving and front-end development.
+            engineering projects and six years of customer service experience, I've built
+            a strong foundation in problem-solving and full-stack development.
           </p>
           <p className="about-bio">
-            Based in Commack, NY — I'm passionate about building intuitive, user-focused
+            Based in New York — I'm passionate about building intuitive, user-focused
             applications and sharpening my skills through LeetCode and real-world projects.
             Currently seeking an entry-level Software Engineer role where I can contribute,
             learn, and grow within a collaborative team.
           </p>
-          <div className="about-tags">
-            {TAGS.map((tag) => (
-              <span key={tag} className="tag">{tag}</span>
-            ))}
-          </div>
         </animated.div>
       </div>
     </div>

@@ -7,7 +7,7 @@ function Header() {
         <span className="brand-name">
           Raja <span className="highlight">Hassan</span> Zafar
         </span>
-        <span className="brand-tagline">Software Engineer · Commack, NY</span>
+        <span className="brand-tagline">Software Engineer · NY</span>
       </div>
       <Navigation />
     </header>

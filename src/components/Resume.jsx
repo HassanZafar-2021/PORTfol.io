@@ -3,19 +3,19 @@ import { useSpring, animated } from "react-spring";
 const SKILLS = [
   {
     category: "Languages",
-    items: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C"],
+    items: ["Java", "Python", "C", "JavaScript", "TypeScript", "SQL",],
   },
   {
     category: "Frameworks & Libraries",
-    items: ["React", "Flask", "LangChain", "Node.js"],
+    items: ["React", "Flask", "LangChain", "Node.js", "Express"],
   },
   {
     category: "Tools & Platforms",
-    items: ["Docker", "Git", "GitLab", "AWS", "GCP", "Jira", "Bash", "Insomnia"],
+    items: ["Docker", "Git", "AWS", "Jira", "Bash", "Insomnia"],
   },
   {
     category: "Concepts",
-    items: ["RESTful APIs", "Data Structures", "OOP", "Agile / Scrum", "CI/CD"],
+    items: ["RESTful APIs", "Data Structures", "Algorithms", "OOP", "Agile", "CI/CD"],
   },
 ];
 
